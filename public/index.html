@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Downloader - Download Video TikTok Tanpa Watermark HD</title>
+    <meta name="description" content="Download video TikTok tanpa watermark dalam kualitas HD. Gratis, cepat, dan mudah digunakan. Mendukung format MP4 dan MP3.">
+    <meta name="keywords" content="tiktok downloader, download tiktok, video tiktok, tanpa watermark, HD, MP4, MP3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>TikTok Downloader</h1>
+                <span class="logo-subtitle">HD & Tanpa Watermark</span>
+            </div>
+            <nav class="nav">
+                <a href="#features">Fitur</a>
+                <a href="#how-to">Cara Pakai</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Download Video TikTok Tanpa Watermark</h2>
+                <p class="hero-subtitle">Dapatkan video TikTok dalam kualitas HD (MP4) atau konversi ke audio MP3. Gratis, cepat, dan mudah digunakan.</p>
+                
+                <!-- Download Form -->
+                <form id="download-form" class="download-form">
+                    <div class="input-group">
+                        <input 
+                            type="url" 
+                            id="videoUrl" 
+                            placeholder="Tempel link video TikTok di sini..." 
+                            required
+                            autocomplete="off"
+                        >
+                        <button type="submit" id="download-btn" class="btn-primary">
+                            <span class="btn-text">Download</span>
+                            <span class="btn-loading" style="display: none;">
+                                <span class="spinner"></span>
+                                Memproses...
+                            </span>
+                        </button>
+                    </div>
+                    
+                    <div class="format-options">
+                        <label class="radio-option">
+                            <input type="radio" name="format" value="both" checked>
+                            <span class="radio-custom"></span>
+                            MP4 + MP3
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="format" value="mp4">
+                            <span class="radio-custom"></span>
+                            Hanya MP4
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="format" value="mp3">
+                            <span class="radio-custom"></span>
+                            Hanya MP3
+                        </label>
+                    </div>
+                </form>
+
+                <!-- Status Messages -->
+                <div id="status-message" class="status-message"></div>
+
+                <!-- Download Results -->
+                <div id="download-results" class="download-results" style="display: none;">
+                    <div class="video-info">
+                        <img id="video-thumbnail" class="video-thumbnail" alt="Video thumbnail">
+                        <div class="video-details">
+                            <h3 id="video-title" class="video-title"></h3>
+                            <p id="video-author" class="video-author"></p>
+                            <span id="video-duration" class="video-duration"></span>
+                        </div>
+                    </div>
+                    <div id="download-links" class="download-links"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Mengapa Memilih Kami?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Super Cepat</h3>
+                    <p>Proses download dalam hitungan detik dengan server berkecepatan tinggi</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>Tanpa Watermark</h3>
+                    <p>Video bersih tanpa logo TikTok, siap untuk digunakan kembali</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎵</div>
+                    <h3>MP4 & MP3</h3>
+                    <p>Download video HD atau ekstrak audio dalam format MP3 berkualitas tinggi</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Semua Device</h3>
+                    <p>Bekerja sempurna di Android, iPhone, PC, dan tablet</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Aman & Privat</h3>
+                    <p>Tidak menyimpan data pribadi, proses download sepenuhnya anonim</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💯</div>
+                    <h3>100% Gratis</h3>
+                    <p>Tanpa biaya tersembunyi, tanpa registrasi, tanpa batasan download</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How To Section -->
+    <section id="how-to" class="how-to">
+        <div class="container">
+            <h2 class="section-title">Cara Download Video TikTok</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Salin Link TikTok</h3>
+                        <p>Buka aplikasi TikTok, pilih video yang ingin didownload, tap "Bagikan" dan pilih "Salin Link"</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Tempel Link</h3>
+                        <p>Kembali ke website ini, tempel link di kolom input dan pilih format yang diinginkan</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Download</h3>
+                        <p>Klik tombol "Download" dan tunggu proses selesai, lalu klik link download yang muncul</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title">Pertanyaan yang Sering Diajukan</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Apakah layanan ini benar-benar gratis?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ya, layanan kami 100% gratis tanpa biaya tersembunyi. Anda dapat mendownload video TikTok sebanyak yang Anda inginkan tanpa batasan.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Apakah video yang didownload benar-benar tanpa watermark?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ya, semua video yang didownload melalui layanan kami akan bersih tanpa watermark TikTok, sehingga siap untuk digunakan kembali.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Bisakah saya download video TikTok di iPhone?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Tentu saja! Layanan kami kompatibel dengan semua device termasuk iPhone, Android, PC, dan tablet. Gunakan browser Safari untuk hasil terbaik di iPhone.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Apakah ada batasan jumlah download?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Tidak ada batasan jumlah download. Anda bebas mendownload video TikTok sebanyak yang Anda butuhkan setiap hari.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TikTok Downloader</h3>
+                    <p>Layanan download video TikTok terbaik tanpa watermark. Cepat, aman, dan mudah digunakan.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="#features">Download MP4</a></li>
+                        <li><a href="#features">Konversi MP3</a></li>
+                        <li><a href="#features">Tanpa Watermark</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Bantuan</h4>
+                    <ul>
+                        <li><a href="#how-to">Cara Pakai</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="mailto:support@example.com">Kontak</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TikTok Downloader. Semua hak dilindungi.</p>
+                <p class="disclaimer">Kami tidak berafiliasi dengan TikTok, ByteDance, atau perusahaan terkait.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
